@@ -133,6 +133,17 @@ Predicted value: 2
 Total elapsed time: 0.199918 ms
 ```
 
+**Note**: in case that you need to restrict the execution in a specific
+cpu then use this command:
+```sh
+taskset --cpu-list 1 python3 python_benchmark.py
+```
+
+This might needed in order to prevent parallel execution on the python
+benchmark, as the tflite-micro code, definitely doesn't support multi-threading.
+It's not clear to me if this also prevent spawned threads to run on other cpu
+cores, too, though.
+
 ## Results
 On my system, using only CPU, it seems that the python implementation
 is 11.2x times faster.
