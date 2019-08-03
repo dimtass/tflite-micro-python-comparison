@@ -122,7 +122,7 @@ void BenchmarkInference(struct tflite_model *tf, float *data, size_t data_size, 
     }
 
     printf("\n----------------------\n");
-    printf("Total elapsed time: %f ms\n", elapsedTime*1000/n_runs);
+    printf("Average time: %f ms\n", elapsedTime*1000/n_runs);
 
 
 }
