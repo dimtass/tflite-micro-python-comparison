@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.6)
 
-set(PROJECT_NAME ${ARCHITECTURE}-mnist-tflite-micro)
+set(PROJECT_NAME mnist-tflite-micro-${ARCHITECTURE})
 project(${PROJECT_NAME} LANGUAGES C CXX)
 
 
