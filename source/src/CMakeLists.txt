@@ -14,19 +14,19 @@ file(GLOB C_SOURCE
     ${DIR_USER_SRCS}
 )
 
-add_executable(amd64-mnist-tflite-micro
+add_executable(${PROJECT_NAME}
     ${C_SOURCE}
     ${EXTERNAL_EXECUTABLES}
 )
 
 if (EXTERNAL_DEPENDENCIES)
-    add_dependencies(amd64-mnist-tflite-micro
+    add_dependencies(${PROJECT_NAME}
         ${EXTERNAL_DEPENDENCIES}
     )
 endif()
 
 if (EXTERNAL_LIBS)
-    target_link_libraries(amd64-mnist-tflite-micro
+    target_link_libraries(${PROJECT_NAME}
         ${EXTERNAL_LIBS}
     )
 endif()

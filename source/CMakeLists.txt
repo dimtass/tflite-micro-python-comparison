@@ -2,7 +2,8 @@
 
 cmake_minimum_required(VERSION 3.6)
 
-project(amd64-mnist-tflite-micro LANGUAGES C CXX)
+set(PROJECT_NAME ${ARCHITECTURE}-mnist-tflite-micro)
+project(${PROJECT_NAME} LANGUAGES C CXX)
 
 
 # set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH} ")

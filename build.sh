@@ -20,7 +20,7 @@ echo "Building the project in Linux environment"
 : ${SRC:="src"}
 
 # Set default arch to stm32
-ARCHITECTURE=amd64
+ARCHITECTURE=$(uname -i)
 # default generator
 IDE_GENERATOR="Unix Makefiles"
 # Current working directory
@@ -41,14 +41,9 @@ fi
 
 BUILD_ARCH_DIR=${WORKING_DIR}/build-${ARCHITECTURE}
 
-if [ "${ARCHITECTURE}" == "amd64" ]; then
-    CMAKE_FLAGS="${CMAKE_FLAGS} \
+CMAKE_FLAGS="${CMAKE_FLAGS} \
                 -DSRC=${SRC} \
                 "
-else
-    >&2 echo "*** Error: Architecture '${ARCHITECTURE}' unknown."
-    exit 1
-fi
 
 if [ "${CLEANBUILD}" == "true" ]; then
     echo "- removing build directory: ${BUILD_ARCH_DIR}"
@@ -68,7 +63,7 @@ mkdir -p build-${ARCHITECTURE}
 cd build-${ARCHITECTURE}
 
 # setup cmake
-cmake ../source -G"${IDE_GENERATOR}" ${CMAKE_FLAGS}
+cmake ../source -G"${IDE_GENERATOR}" ${CMAKE_FLAGS} -DARCHITECTURE=${ARCHITECTURE}
 
 # build
 make -j${PARALLEL} --no-print-directory
