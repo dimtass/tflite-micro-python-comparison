@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3                          -fmessage-length=0 -ffunction-sections -fmessage-length=0             -Wall -lm  -fno-exceptions -fno-rtti -s -O3 -DNDEBUG   -Wl,--gc-sections -lm CMakeFiles/amd64-mnist-tflite-micro.dir/main.cpp.o  -o amd64-mnist-tflite-micro ../libTensorflow_lite_micro.a 

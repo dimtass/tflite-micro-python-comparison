@@ -1,6 +1,0 @@
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/CMakeFiles/rebuild_cache.dir
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/CMakeFiles/Tensorflow_lite_micro.dir
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/CMakeFiles/edit_cache.dir
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/src/CMakeFiles/rebuild_cache.dir
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/src/CMakeFiles/amd64-mnist-tflite-micro.dir
-/rnd/bitbucket/tflite-micro-python-comparison/build-amd64/src/CMakeFiles/edit_cache.dir
